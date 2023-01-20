@@ -1,0 +1,68 @@
+[
+  {
+    "type": "console.page/route",
+    "properties": {
+      "exact": true,
+      "path": "/example",
+      "component": { "$codeRef": "ExamplePage" }
+    }
+  },
+  {
+    "type": "console.navigation/href",
+    "properties": {
+      "id": "example",
+      "name": "Plugin Example",
+      "href": "/example",
+      "perspective": "admin",
+      "section": "home"
+    }
+  },
+  {
+    "type": "console.navigation/href",
+    "properties": {
+      "id": "topology",
+      "perspective": "admin",
+      "section": "workloads",
+      "insertBefore": "pods",
+      "name": "%devconsole~Topology%",
+      "href": "/topology",
+      "namespaced": true,
+      "dataAttributes": {
+        "data-quickstart-id": "qs-nav-topology",
+        "data-test-id": "topology-header"
+      }
+    },
+    "flags": {
+      "required": ["OPENSHIFT"]
+    }
+  },
+  {
+    "type": "console.navigation/href",
+    "properties": {
+      "id": "add",
+      "perspective": "admin",
+      "section": "workloads",
+      "insertAfter": "topology",
+      "name": "%devconsole~+Add%",
+      "href": "/add",
+      "namespaced": true,
+      "dataAttributes": {
+        "data-quickstart-id": "qs-nav-add",
+        "data-test-id": "+Add-header"
+      }
+    },
+    "flags": {
+      "required": ["OPENSHIFT"]
+    }
+  },
+  {
+    "type": "console.navigation/separator",
+    "properties": {
+      "perspective": "admin",
+      "section": "workloads",
+      "id": "WorkloadsDevSeparator",
+      "insertAfter": "add",
+      "testID": "WorkloadsDevSeparator"
+    }
+  }
+]
