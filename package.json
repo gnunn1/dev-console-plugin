@@ -54,7 +54,6 @@
     "displayName": "OpenShift Dev Console Plugin",
     "description": "OpenShift console plugin that adds Developer perspective items to the Administrator perspective",
     "exposedModules": {
-      "ExamplePage": "./components/ExamplePage"
     },
     "dependencies": {
       "@console/pluginAPI": "*"
