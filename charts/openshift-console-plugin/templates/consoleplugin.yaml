@@ -7,6 +7,7 @@ metadata:
 spec:
   displayName: {{ default (printf "%s Plugin" (include "openshift-console-plugin.name" .)) .Values.plugin.description }}
   backend:
+    type: Service
     service:
       name: {{ template "openshift-console-plugin.name" . }}
       namespace: {{ .Release.Namespace }}
